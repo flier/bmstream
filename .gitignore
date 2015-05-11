@@ -5,3 +5,8 @@ dist
 .idea
 .sass-cache
 bower_components
+
+// ignore compiled typescript
+*.d.ts
+*.map
+scripts/*.js

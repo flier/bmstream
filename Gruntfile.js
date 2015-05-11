@@ -419,6 +419,32 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    // Compile TypeScript
+    typescript: {
+      contentScript: {
+        src: ['scripts/content_script.ts'],
+        dest: 'scripts/content_script.js',
+        options: {
+          module: 'amd', //or commonjs
+          target: 'es5', //or es3
+          basePath: '',
+          sourceMap: true,
+          declaration: true
+        }
+      },
+      eventPage: {
+        src: ['scripts/event_page.ts'],
+        dest: 'scripts/event_page.js',
+        options: {
+          module: 'amd', //or commonjs
+          target: 'es5', //or es3
+          basePath: '',
+          sourceMap: true,
+          declaration: true
+        }
+      }
     }
   });
 
@@ -460,6 +486,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngAnnotate',
+    'typescript',
     'copy:dist',
     'cdnify',
     'cssmin',
@@ -474,4 +501,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-typescript');
 };
