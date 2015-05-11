@@ -16,17 +16,17 @@
 
   "browser_action": {
     "default_title": "__MSG_extName__",
-    "default_icon": "bookmark-add-48.png",
-    "default_popup": "popup.html"
+    "default_icon": "bookmark-add-128.png",
+    "default_popup": "pages/popup.html"
   },
   "background": {
     "persistent": false,
-    "scripts": ["event_page.js"]
+    "scripts": ["pages/event_page.js"]
   },
-  "options_page": "options.html",
+  "options_page": "pages/options.html",
   "options_ui": {
     "chrome_style": true,
-    "page": "options.html"
+    "page": "pages/options.html"
   },
 
   "permissions": [
@@ -35,7 +35,7 @@
     "storage"
   ],
   "chrome_url_overrides" : {
-    "bookmarks": "bookmarks.html"
+    "bookmarks": "pages/bookmarks.html"
   },
   "storage": {
     "managed_schema": "schema.json"
