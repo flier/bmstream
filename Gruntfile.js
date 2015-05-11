@@ -182,7 +182,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     wiredep: {
       app: {
-        src: ['<%= yeoman.app %>/index.html'],
+        src: ['<%= yeoman.app %>/*.html'],
         ignorePath:  /\.\.\//
       },
       test: {
@@ -252,7 +252,7 @@ module.exports = function (grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: '<%= yeoman.app %>/index.html',
+      html: '<%= yeoman.app %>/*.html',
       options: {
         dest: '<%= yeoman.dist %>',
         flow: {
@@ -379,7 +379,6 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'pages/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*'
           ]
@@ -396,8 +395,13 @@ module.exports = function (grunt) {
         }, {
           expand: true,
           cwd: '.tmp/scripts',
-          src: ['*.js', '*.map'],
-          dest: '<%= yeoman.dist %>/pages'
+          src: ['**/*.js', '**/*.map'],
+          dest: '<%= yeoman.dist %>/'
+        },  {
+          expand: true,
+          cwd: '.tmp/app/scripts',
+          src: ['**/*.js', '**/*.map'],
+          dest: '<%= yeoman.dist %>/scripts'
         }, {
           expand: true,
           cwd: '.',
@@ -449,7 +453,7 @@ module.exports = function (grunt) {
     // Compile TypeScript
     typescript: {
       base: {
-        src: ['scripts/*.ts'],
+        src: ['scripts/**/*.ts', 'app/scripts/**/*.ts'],
         dest: '.tmp/',
         options: {
           module: 'amd', //or commonjs
