@@ -15,14 +15,6 @@
     "default_icon": "icon_19.png",
     "default_popup": "popup.html"
   },
-  "page_action": {
-    "default_icon": {
-      "19": "images/icon19.png",
-      "38": "images/icon38.png"
-    },
-    "default_title": "Bookmark Stream",
-    "default_popup": "popup.html"
-  },
   "background": {
     "persistent": false,
     "scripts": ["scripts/event_page.js"]
@@ -35,8 +27,12 @@
 
   "permissions": [
     "activeTab",
+    "bookmarks",
     "storage"
   ],
+  "chrome_url_overrides" : {
+    "bookmarks": "bookmarks.html"
+  },
   "chrome_ui_overrides" : {
     "bookmarks_ui": {
       "remove_button": "true",
