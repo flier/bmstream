@@ -17,7 +17,7 @@
   },
   "background": {
     "persistent": false,
-    "scripts": ["scripts/event_page.js"]
+    "scripts": ["event_page.js"]
   },
   "options_page": "options.html",
   "options_ui": {
