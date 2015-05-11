@@ -407,6 +407,16 @@ module.exports = function (grunt) {
           cwd: '.',
           src: ['manifest.json', 'schema.json'],
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: 'locales',
+          src: ['**/*.json'],
+          dest: '<%= yeoman.dist %>/_locales'
+        }, {
+          expand: true,
+          cwd: 'icons',
+          src: ['**/*.png'],
+          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
