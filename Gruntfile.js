@@ -392,6 +392,16 @@ module.exports = function (grunt) {
           cwd: '.',
           src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '.tmp/scripts',
+          src: ['*.js', '*.map'],
+          dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '.',
+          src: ['manifest.json'],
+          dest: '<%= yeoman.dist %>'
         }]
       },
       styles: {
@@ -429,7 +439,7 @@ module.exports = function (grunt) {
     typescript: {
       contentScript: {
         src: ['scripts/content_script.ts'],
-        dest: 'scripts/content_script.js',
+        dest: '.tmp/scripts/content_script.js',
         options: {
           module: 'amd', //or commonjs
           target: 'es5', //or es3
@@ -440,7 +450,7 @@ module.exports = function (grunt) {
       },
       eventPage: {
         src: ['scripts/event_page.ts'],
-        dest: 'scripts/event_page.js',
+        dest: '.tmp/scripts/event_page.js',
         options: {
           module: 'amd', //or commonjs
           target: 'es5', //or es3
