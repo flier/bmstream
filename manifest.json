@@ -1,18 +1,49 @@
 {
+  "manifest_version": 2,
   "name": "Bookmark Stream",
   "version": "0.1",
+  "default_locale": "en",
   "description": "Bookmark Stream for Chrome",
   "icons": { "128": "icon_128.png" },
-  "background": {
-    "persistent": false,
-    "scripts": ["scripts/event_page.js"]
+  "author": {
+    "name": "Flier Lu",
+    "email": "flier.lu@gmail.com"
   },
-  "permissions": [
-    "activeTab"
-  ],
+
   "browser_action": {
     "default_title": "Bookmark Stream",
     "default_icon": "icon_19.png",
     "default_popup": "popup.html"
+  },
+  "page_action": {
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "Bookmark Stream",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "persistent": false,
+    "scripts": ["scripts/event_page.js"]
+  },
+  "options_page": "options.html",
+  "options_ui": {
+    "chrome_style": true,
+    "page": "options.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "chrome_ui_overrides" : {
+    "bookmarks_ui": {
+      "remove_button": "true",
+      "remove_bookmark_shortcut": "true"
+    }
+  },
+  "storage": {
+    "managed_schema": "schema.json"
   }
 }

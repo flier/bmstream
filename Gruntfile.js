@@ -399,8 +399,13 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>'
         }, {
           expand: true,
+          cwd: 'pages',
+          src: ['*.html'],
+          dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
           cwd: '.',
-          src: ['manifest.json'],
+          src: ['manifest.json', 'schema.json'],
           dest: '<%= yeoman.dist %>'
         }]
       },
@@ -437,20 +442,9 @@ module.exports = function (grunt) {
 
     // Compile TypeScript
     typescript: {
-      contentScript: {
-        src: ['scripts/content_script.ts'],
-        dest: '.tmp/scripts/content_script.js',
-        options: {
-          module: 'amd', //or commonjs
-          target: 'es5', //or es3
-          basePath: '',
-          sourceMap: true,
-          declaration: true
-        }
-      },
-      eventPage: {
-        src: ['scripts/event_page.ts'],
-        dest: '.tmp/scripts/event_page.js',
+      base: {
+        src: ['scripts/*.ts'],
+        dest: '.tmp/',
         options: {
           module: 'amd', //or commonjs
           target: 'es5', //or es3
