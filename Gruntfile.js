@@ -463,6 +463,26 @@ module.exports = function (grunt) {
           declaration: true
         }
       }
+    },
+
+    tsd: {
+      refresh: {
+        options: {
+          // execute a command
+          command: 'reinstall',
+
+          //optional: always get from HEAD
+          latest: true,
+
+          // specify config file
+          config: 'tsd.json',
+
+          // experimental: options to pass to tsd.API
+          opts: {
+            // props from tsd.Options
+          }
+        }
+      }
     }
   });
 
@@ -504,6 +524,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngAnnotate',
+    'tsd',
     'typescript',
     'copy:dist',
     //'cdnify',
