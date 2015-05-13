@@ -30,6 +30,7 @@
   },
 
   "permissions": [
+    "tabs",
     "activeTab",
     "bookmarks",
     "storage"

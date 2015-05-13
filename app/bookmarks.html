@@ -14,7 +14,80 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body>
+<body ng-app="bmstreamApp" data-framework="typescript">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">__MSG_extName__</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <ul class="nav nav-sidebar ">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="badge">14</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="badge">42</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="inner-header">
+          <ol class="breadcrumb pull-left">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+          </ol>
+
+          <div class="btn-group pull-right">
+            <a type="button" class="btn btn-default" aria-label="Tiles"
+               ng-class="{selected: location.path() == '/tiles'} " ng-href="#/tiles">
+              <span class="glyphicon glyphicon-th" aria-hidden="true"></span></a>
+            <a type="button" class="btn btn-default" aria-label="Timeline"
+               ng-class="{selected: location.path() == '/timeline'} " ng-href="#/timeline">
+              <span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
+            <a type="button" class="btn btn-default" aria-label="Tag Cloud"
+               ng-class="{selected: location.path() == '/tagcloud'} " ng-href="#/tagcloud">
+              <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span></a>
+          </div>
+        </div>
+
+        <div ng-view=""></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
   <script>
     !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -39,13 +112,20 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/stacktrace-js/stacktrace.js"></script>
+  <script src="bower_components/log4javascript/log4javascript.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- build:js({.tmp,app}) scripts/bookmarks.js -->
-  <script src="scripts/bookmarks.js"></script>
-  <script src="scripts/controllers/main.js"></script>
-  <script src="scripts/controllers/about.js"></script>
+  <!-- build:js({.tmp,app}) scripts/bookmarks.app.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/interfaces/bookmark.js"></script>
+  <script src="scripts/interfaces/storage.js"></script>
+  <script src="scripts/directives/bookmark.js"></script>
+  <script src="scripts/controllers/bookmark.js"></script>
+  <script src="scripts/services/bookmark.js"></script>
+  <script src="scripts/services/storage.js"></script>
   <!-- endbuild -->
 </body>
 </html>
