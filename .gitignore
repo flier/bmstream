@@ -10,3 +10,4 @@ bower_components
 *.d.ts
 *.map
 scripts/*.js
+app/scripts/*.js

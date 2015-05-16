@@ -3,11 +3,14 @@
 module bookmarks {
   'use strict';
 
-  export function BookmarkDirective(): ng.IDirective {
+  function BookmarkDirective(): ng.IDirective {
     return {
       link: ($scope: ng.IScope, element: JQuery, attributes: any) => {
 
       }
     }
   }
+
+  angular.module('app.directives', [])
+    .directive('bookmark', BookmarkDirective);
 }

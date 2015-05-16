@@ -6,25 +6,43 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "jquery/jquery.d.ts": {
-      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
     },
     "angularjs/angular.d.ts": {
-      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
     },
     "moment/moment.d.ts": {
-      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
     },
     "chrome/chrome.d.ts": {
-      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
     },
     "webrtc/MediaStream.d.ts": {
-      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
     },
     "lunr/lunr.d.ts": {
-      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
     },
     "log4javascript/log4javascript.d.ts": {
-      "commit": "846a250e0a6f5e6adf6347ee4ca442a9d1abd8fc"
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
+    },
+    "angularjs/angular-route.d.ts": {
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
+    },
+    "angularjs/angular-cookies.d.ts": {
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
+    },
+    "angularjs/angular-animate.d.ts": {
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
+    },
+    "angularjs/angular-resource.d.ts": {
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
+    },
+    "angularjs/angular-mocks.d.ts": {
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
+    },
+    "angularjs/angular-sanitize.d.ts": {
+      "commit": "7d2f0aa875cc3bc41f3567e3ff99d344df986155"
     }
   }
 }

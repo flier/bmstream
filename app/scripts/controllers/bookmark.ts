@@ -3,7 +3,7 @@
 module bookmarks {
   'use strict';
 
-  export class BookmarksTreeController {
+  class BookmarksTreeController {
     private log = log4javascript.getLogger("bookmarks.BookmarksTreeController");
 
     public static $inject = [
@@ -19,7 +19,7 @@ module bookmarks {
     }
   }
 
-  export class BookmarksTilesController {
+  class BookmarksTilesController {
     private log = log4javascript.getLogger("bookmarks.BookmarksTilesController");
 
     public static $inject = [
@@ -38,7 +38,7 @@ module bookmarks {
     }
   }
 
-  export class BookmarksTimelineController {
+  class BookmarksTimelineController {
     private log = log4javascript.getLogger("bookmarks.BookmarksTimelineController");
 
     public static $inject = [
@@ -57,7 +57,7 @@ module bookmarks {
     }
   }
 
-  export class BookmarksTagCloudController {
+  class BookmarksTagCloudController {
     private log = log4javascript.getLogger("bookmarks.BookmarksTagCloudController");
 
     public static $inject = [
