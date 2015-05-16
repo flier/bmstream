@@ -5,6 +5,7 @@ module bookmarks {
 
   var app = angular.module('app', [
     'ngAnimate', 'ngAria', 'ngCookies', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch',
+    'ui.tree',
     'app.services', 'app.directives', 'app.controllers'
   ]).config(function ($routeProvider:angular.route.IRouteProvider) {
       $routeProvider

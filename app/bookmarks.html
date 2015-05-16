@@ -8,6 +8,7 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/angular-ui-tree/dist/angular-ui-tree.min.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -38,29 +39,21 @@
     </div>
   </nav>
 
-  <div ng-controller="TreeCtrl" class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
-        <ul class="nav nav-sidebar ">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="badge">14</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="badge">42</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-        </ul>
+      <script type="text/ng-template" id="nodes_renderer.html">
+        <div ui-tree-handle>
+          {{bookmark.title}}
+        </div>
+        <ol ui-tree-nodes="" ng-model="bookmark.bookmarks">
+          <li ng-repeat="bookmark in bookmark.bookmarks" ui-tree-node ng-include="'nodes_renderer.html'">
+          </li>
+        </ol>
+      </script>
+      <div ng-controller="TreeCtrl" ui-tree>
+        <ol ui-tree-nodes="" ng-model="bookmarks" id="tree-root">
+          <li ng-repeat="bookmark in bookmarks" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+        </ol>
       </div>
       <div ng-controller="ViewCtrl" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="inner-header">
@@ -114,6 +107,8 @@
   <script src="bower_components/moment/moment.js"></script>
   <script src="bower_components/stacktrace-js/stacktrace.js"></script>
   <script src="bower_components/log4javascript/log4javascript.js"></script>
+  <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.js"></script>
+  <script src="bower_components/angular-ui-tree/dist/angular-ui-tree.min.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
