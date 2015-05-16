@@ -4,35 +4,32 @@ module ui {
   'use strict';
 
   export class NavbarController {
-    private log = log4javascript.getLogger("ui.NavbarController");
-
     public static $inject = [
+      '$log',
       '$scope',
       '$location'
     ]
 
     constructor(
+      private $log: ng.ILogService,
       private $scope: ng.IScope,
       private $location: ng.ILocationService)
     {
-      this.log.info("created");
     }
   }
 
   export class ViewController {
-    private log = log4javascript.getLogger("ui.ViewController");
-
     public static $inject = [
+      '$log',
       '$scope',
       '$location'
     ]
 
     constructor(
+      private $log: ng.ILogService,
       private $scope: IBookmarkViewScope,
       private $location: ng.ILocationService)
     {
-      this.log.info("created");
-
       $scope.location = $location;
     }
   }

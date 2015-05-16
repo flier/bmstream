@@ -35,7 +35,6 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/moment/moment.js',
       'bower_components/stacktrace-js/stacktrace.js',
-      'bower_components/log4javascript/log4javascript.js',
       'bower_components/angular-ui-tree/dist/angular-ui-tree.js',
       'bower_components/angular-ui-tree/dist/angular-ui-tree.min.js',
       'bower_components/angular-mocks/angular-mocks.js',

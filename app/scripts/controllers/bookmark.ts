@@ -4,34 +4,35 @@ module bookmarks {
   'use strict';
 
   export class TreeController {
-    private log = log4javascript.getLogger("bookmarks.TreeController");
-
     public static $inject = [
-      '$scope',
+      '$log',
       '$location',
-      '$bookmarkProvider'
+      '$scope',
+      'bookmarkProvider'
     ]
 
     constructor(
-      private $scope: IBookmarkCollectionScope,
+      private $log: ng.ILogService,
       private $location: ng.ILocationService,
-      private $bookmarkProvider: IBookmarkProvider)
+      private $scope: IBookmarkCollectionScope,
+      private bookmarkProvider: IBookmarkProvider)
     {
-      $scope.bookmarks = $bookmarkProvider.bookmarks;
+      $scope.bookmarks = bookmarkProvider.bookmarks;
     }
   }
 
   export class TilesController {
-    private log = log4javascript.getLogger("bookmarks.TilesController");
-
     public static $inject = [
-      '$scope',
-      '$location'
+      '$log',
+      '$location',
+      '$scope'
     ]
 
     constructor(
-      private $scope: IBookmarkCollectionViewScope,
-      private $location: ng.ILocationService)
+      private $log: ng.ILogService,
+      private $location: ng.ILocationService,
+      private $scope: IBookmarkCollectionViewScope
+  )
     {
       if ($location.path() === '') $location.path('/');
       $scope.location = $location;
@@ -39,16 +40,17 @@ module bookmarks {
   }
 
   export class TimelineController {
-    private log = log4javascript.getLogger("bookmarks.TimelineController");
-
     public static $inject = [
-      '$scope',
-      '$location'
+      '$log',
+      '$location',
+      '$scope'
     ]
 
     constructor(
-      private $scope: IBookmarkCollectionViewScope,
-      private $location: ng.ILocationService)
+      private $log: ng.ILogService,
+      private $location: ng.ILocationService,
+      private $scope: IBookmarkCollectionViewScope
+    )
     {
       if ($location.path() === '') $location.path('/');
       $scope.location = $location;
@@ -56,16 +58,17 @@ module bookmarks {
   }
 
   export class TagCloudController {
-    private log = log4javascript.getLogger("bookmarks.TagCloudController");
-
     public static $inject = [
-      '$scope',
-      '$location'
+      '$log',
+      '$location',
+      '$scope'
     ]
 
     constructor(
-      private $scope: IBookmarkCollectionViewScope,
-      private $location: ng.ILocationService)
+      private $log: ng.ILogService,
+      private $location: ng.ILocationService,
+      private $scope: IBookmarkCollectionViewScope
+    )
     {
       if ($location.path() === '') $location.path('/');
       $scope.location = $location;

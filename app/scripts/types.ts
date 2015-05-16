@@ -11,7 +11,6 @@
 /// <reference path="../../typings/moment/moment.d.ts" />
 /// <reference path="../../typings/chrome/chrome.d.ts" />
 /// <reference path="../../typings/lunr/lunr.d.ts" />
-/// <reference path="../../typings/log4javascript/log4javascript.d.ts" />
 
 /// <reference path="interfaces/bookmark.ts" />
 /// <reference path="interfaces/storage.ts" />

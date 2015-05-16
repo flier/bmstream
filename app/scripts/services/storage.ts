@@ -4,10 +4,26 @@ module storage {
   'use strict';
 
   export class BookmarkStorage implements IBookmarkStorage {
-    private log = log4javascript.getLogger("storage.BookmarkStorage");
+    public static $inject = [
+      '$log'
+    ]
+
+    constructor(
+      private $log: ng.ILogService
+    ) {
+
+    }
   }
 
   export class ScreenshotStorage implements IScreenshotStorage {
-    private log = log4javascript.getLogger("storage.ScreenshotStorage");
+    public static $inject = [
+      '$log'
+    ]
+
+    constructor(
+      private $log: ng.ILogService
+    ) {
+
+    }
   }
 }

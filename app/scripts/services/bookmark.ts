@@ -4,24 +4,28 @@ module bookmarks {
   'use strict';
 
   export class BookmarkProvider implements IBookmarkProvider {
+    bookmarks: IBookmarkCollection;
 
+    constructor(
+
+    ) {}
   }
 
   export class BookmarkImporter implements IBookmarkImporter {
-    log = log4javascript.getLogger("bookmarks.BookmarkImporter");
+    constructor(
 
-    constructor(public visitor: IBookmarkVisitor) {}
+    ) {}
 
-    imports() {
-      chrome.bookmarks.getTree((nodes) => this.import(nodes))
+    imports(visitor: IBookmarkVisitor) {
+      chrome.bookmarks.getTree((nodes) => this.import(nodes, visitor))
     }
 
-    import(nodes: chrome.bookmarks.BookmarkTreeNode[]) : void {
+    import(nodes: chrome.bookmarks.BookmarkTreeNode[], visitor: IBookmarkVisitor) : void {
       for (var node in nodes) {
-        this.visitor.visit(node)
+        visitor.visit(node)
 
         if (node.children) {
-          this.import(node.children)
+          this.import(node.children, visitor)
         }
       }
     }

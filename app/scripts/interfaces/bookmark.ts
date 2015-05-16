@@ -42,8 +42,6 @@ module bookmarks {
   }
 
   export interface IBookmarkImporter {
-    visitor: IBookmarkVisitor
-
-    import(nodes: chrome.bookmarks.BookmarkTreeNode[]): void;
+    import(nodes: chrome.bookmarks.BookmarkTreeNode[], visitor: IBookmarkVisitor): void;
   }
 }
