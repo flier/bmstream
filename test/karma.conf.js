@@ -11,7 +11,7 @@ module.exports = function(config) {
     autoWatch: true,
 
     // base path, that will be used to resolve files and exclude
-    basePath: '../',
+    basePath: '..',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     // as well as any additional frameworks (requirejs/chai/sinon/...)
@@ -37,12 +37,8 @@ module.exports = function(config) {
       'bower_components/stacktrace-js/stacktrace.js',
       'bower_components/angular-ui-tree/dist/angular-ui-tree.js',
       'bower_components/angular-ui-tree/dist/angular-ui-tree.min.js',
-      'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/lunr.js/lunr.js',
-      'bower_components/timeline.js/build/js/timeline.js',
-      'bower_components/timeline.js/build/js/storyjs-embed.js',
-      'bower_components/timeline.js/build/js/storyjs-embed-generator.js',
-      'bower_components/timeline.js/build/js/storyjs-embed-cdn.js',
+      'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",
@@ -65,8 +61,7 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      //"PhantomJS"
-      "Chrome"
+      "PhantomJS"
     ],
 
     // Which plugins to enable
