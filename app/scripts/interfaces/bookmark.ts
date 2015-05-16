@@ -25,14 +25,16 @@ module bookmarks {
     [index: number]: IBookmark;
   }
 
-  export interface IBookmarkCollectionTreeScope extends ng.IScope {
+  export interface IBookmarkCollectionScope extends ng.IScope {
+    bookmarks: IBookmarkCollection;
+  }
+
+  export interface IBookmarkCollectionViewScope extends IBookmarkCollectionScope {
     location: ng.ILocationService;
   }
 
-
-  export interface IBookmarkCollectionViewScope extends ng.IScope {
+  export interface IBookmarkProvider {
     bookmarks: IBookmarkCollection;
-    location: ng.ILocationService;
   }
 
   export interface IBookmarkVisitor {

@@ -3,6 +3,10 @@
 module bookmarks {
   'use strict';
 
+  export class BookmarkProvider implements IBookmarkProvider {
+
+  }
+
   export class BookmarkImporter implements IBookmarkImporter {
     log = log4javascript.getLogger("bookmarks.BookmarkImporter");
 

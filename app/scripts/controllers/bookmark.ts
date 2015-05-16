@@ -8,14 +8,16 @@ module bookmarks {
 
     public static $inject = [
       '$scope',
-      '$location'
+      '$location',
+      '$bookmarkProvider'
     ]
 
     constructor(
-      private $scope: IBookmarkCollectionTreeScope,
-      private $location: ng.ILocationService)
+      private $scope: IBookmarkCollectionScope,
+      private $location: ng.ILocationService,
+      private $bookmarkProvider: IBookmarkProvider)
     {
-      this.log.info("created");
+      $scope.bookmarks = $bookmarkProvider.bookmarks;
     }
   }
 
@@ -31,8 +33,6 @@ module bookmarks {
       private $scope: IBookmarkCollectionViewScope,
       private $location: ng.ILocationService)
     {
-      this.log.info("created");
-
       if ($location.path() === '') $location.path('/');
       $scope.location = $location;
     }
@@ -50,8 +50,6 @@ module bookmarks {
       private $scope: IBookmarkCollectionViewScope,
       private $location: ng.ILocationService)
     {
-      this.log.info("created");
-
       if ($location.path() === '') $location.path('/');
       $scope.location = $location;
     }
@@ -69,8 +67,6 @@ module bookmarks {
       private $scope: IBookmarkCollectionViewScope,
       private $location: ng.ILocationService)
     {
-      this.log.info("created");
-
       if ($location.path() === '') $location.path('/');
       $scope.location = $location;
     }
