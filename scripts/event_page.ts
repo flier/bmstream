@@ -1,0 +1,3 @@
+module extenstion {
+  'use strict';
+}

@@ -1,6 +1,6 @@
 /// <reference path="../types.ts" />
 
-module bookmarks {
+module storage {
   'use strict';
 
   export interface IBookmarkStorage {

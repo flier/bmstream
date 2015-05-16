@@ -1,11 +1,13 @@
 /// <reference path="../types.ts" />
 
-module bookmarks {
+module app {
   'use strict';
 
   angular.module('app.controllers', [])
-    .controller('TreeCtrl', BookmarksTreeController)
-    .controller('TilesCtrl', BookmarksTilesController)
-    .controller('TimelineCtrl', BookmarksTimelineController)
-    .controller('TagCloudCtrl', BookmarksTagCloudController);
+    .controller('NavbarCtrl', ui.NavbarController)
+    .controller('ViewCtrl', ui.ViewController)
+    .controller('TreeCtrl', bookmarks.TreeController)
+    .controller('TilesCtrl', bookmarks.TilesController)
+    .controller('TimelineCtrl', bookmarks.TimelineController)
+    .controller('TagCloudCtrl', bookmarks.TagCloudController);
 }

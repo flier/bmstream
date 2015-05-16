@@ -3,8 +3,8 @@
 module bookmarks {
   'use strict';
 
-  class BookmarksTreeController {
-    private log = log4javascript.getLogger("bookmarks.BookmarksTreeController");
+  export class TreeController {
+    private log = log4javascript.getLogger("bookmarks.TreeController");
 
     public static $inject = [
       '$scope',
@@ -19,8 +19,8 @@ module bookmarks {
     }
   }
 
-  class BookmarksTilesController {
-    private log = log4javascript.getLogger("bookmarks.BookmarksTilesController");
+  export class TilesController {
+    private log = log4javascript.getLogger("bookmarks.TilesController");
 
     public static $inject = [
       '$scope',
@@ -38,8 +38,8 @@ module bookmarks {
     }
   }
 
-  class BookmarksTimelineController {
-    private log = log4javascript.getLogger("bookmarks.BookmarksTimelineController");
+  export class TimelineController {
+    private log = log4javascript.getLogger("bookmarks.TimelineController");
 
     public static $inject = [
       '$scope',
@@ -57,8 +57,8 @@ module bookmarks {
     }
   }
 
-  class BookmarksTagCloudController {
-    private log = log4javascript.getLogger("bookmarks.BookmarksTagCloudController");
+  export class TagCloudController {
+    private log = log4javascript.getLogger("bookmarks.TagCloudController");
 
     public static $inject = [
       '$scope',

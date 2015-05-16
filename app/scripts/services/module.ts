@@ -1,10 +1,10 @@
 /// <reference path="../types.ts" />
 
-module bookmarks {
+module app {
   'use strict';
 
   angular.module('app.services', [])
-    .service('importer', BookmarkImporter)
-    .service('bookmarkStorage', BookmarkStorage)
-    .service('screenshotStorage', ScreenshotStorage);
+    .service('importer', bookmarks.BookmarkImporter)
+    .service('bookmarkStorage', storage.BookmarkStorage)
+    .service('screenshotStorage', storage.ScreenshotStorage);
 }

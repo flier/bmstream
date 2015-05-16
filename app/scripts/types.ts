@@ -14,7 +14,9 @@
 
 /// <reference path="interfaces/bookmark.ts" />
 /// <reference path="interfaces/storage.ts" />
+/// <reference path="interfaces/ui.ts" />
 /// <reference path="controllers/bookmark.ts" />
+/// <reference path="controllers/ui.ts" />
 /// <reference path="directives/bookmark.ts" />
 /// <reference path="services/bookmark.ts" />
 /// <reference path="services/storage.ts" />

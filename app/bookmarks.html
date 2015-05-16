@@ -15,7 +15,7 @@
   <!-- endbuild -->
 </head>
 <body ng-app="app" data-framework="typescript">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav ng-controller="NavbarCtrl" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,7 +38,7 @@
     </div>
   </nav>
 
-  <div class="container-fluid">
+  <div ng-controller="TreeCtrl" class="container-fluid">
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar ">
@@ -62,23 +62,22 @@
           </ul>
         </ul>
       </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div ng-controller="ViewCtrl" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <div class="inner-header">
           <ol class="breadcrumb pull-left">
             <li><a href="#">Home</a></li>
             <li><a href="#">Library</a></li>
             <li class="active">Data</li>
           </ol>
-
           <div class="btn-group pull-right">
             <a type="button" class="btn btn-default" aria-label="Tiles"
-               ng-class="{selected: location.path() == '/tiles'} " ng-href="#/tiles">
+               ng-class="{active: location.path() == '/tiles'}" ng-href="#/tiles">
               <span class="glyphicon glyphicon-th" aria-hidden="true"></span></a>
             <a type="button" class="btn btn-default" aria-label="Timeline"
-               ng-class="{selected: location.path() == '/timeline'} " ng-href="#/timeline">
+               ng-class="{active: location.path() == '/timeline'}" ng-href="#/timeline">
               <span class="glyphicon glyphicon-film" aria-hidden="true"></span></a>
             <a type="button" class="btn btn-default" aria-label="Tag Cloud"
-               ng-class="{selected: location.path() == '/tagcloud'} " ng-href="#/tagcloud">
+               ng-class="{active: location.path() == '/tagcloud'}" ng-href="#/tagcloud">
               <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span></a>
           </div>
         </div>
@@ -122,8 +121,11 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/interfaces/bookmark.js"></script>
   <script src="scripts/interfaces/storage.js"></script>
+  <script src="scripts/interfaces/ui.js"></script>
   <script src="scripts/directives/bookmark.js"></script>
   <script src="scripts/controllers/bookmark.js"></script>
+  <script src="scripts/controllers/ui.js"></script>
+  <script src="scripts/controllers/module.js"></script>
   <script src="scripts/services/bookmark.js"></script>
   <script src="scripts/services/storage.js"></script>
   <script src="scripts/services/module.js"></script>
