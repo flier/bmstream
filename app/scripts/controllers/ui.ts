@@ -3,7 +3,7 @@
 module ui {
   'use strict';
 
-  export class NavbarController {
+  class NavbarController {
     public static $inject = [
       '$log',
       '$scope',
@@ -18,7 +18,7 @@ module ui {
     }
   }
 
-  export class ViewController {
+  class ViewController {
     public static $inject = [
       '$log',
       '$scope',
@@ -33,4 +33,8 @@ module ui {
       $scope.location = $location;
     }
   }
+
+  angular.module('app.controllers.ui', [])
+    .controller('NavbarCtrl', NavbarController)
+    .controller('ViewCtrl', ViewController);
 }

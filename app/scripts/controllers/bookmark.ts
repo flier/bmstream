@@ -3,7 +3,7 @@
 module bookmarks {
   'use strict';
 
-  export class TreeController {
+  class TreeController {
     public static $inject = [
       '$log',
       '$location',
@@ -21,7 +21,7 @@ module bookmarks {
     }
   }
 
-  export class TilesController {
+  class TilesController {
     public static $inject = [
       '$log',
       '$location',
@@ -39,7 +39,7 @@ module bookmarks {
     }
   }
 
-  export class TimelineController {
+  class TimelineController {
     public static $inject = [
       '$log',
       '$location',
@@ -57,7 +57,7 @@ module bookmarks {
     }
   }
 
-  export class TagCloudController {
+  class TagCloudController {
     public static $inject = [
       '$log',
       '$location',
@@ -74,4 +74,10 @@ module bookmarks {
       $scope.location = $location;
     }
   }
+
+  angular.module('app.controllers.bookmark', [])
+    .controller('TreeCtrl', TreeController)
+    .controller('TilesCtrl', TilesController)
+    .controller('TimelineCtrl', TimelineController)
+    .controller('TagCloudCtrl', TagCloudController);
 }
