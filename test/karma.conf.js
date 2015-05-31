@@ -49,7 +49,7 @@ module.exports = function(config) {
     ],
 
     // web server port
-    port: 8080,
+    port: 9876,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -60,7 +60,7 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      "PhantomJS"
+      "PhantomJS", "Chrome"
     ],
 
     // Which plugins to enable
@@ -78,7 +78,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG
 
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {
