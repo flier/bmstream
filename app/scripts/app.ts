@@ -4,9 +4,8 @@ module bookmarks {
   'use strict';
 
   var app = angular.module('app', [
-    'ngAnimate', 'ngAria', 'ngCookies', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch',
-    'ui.tree',
-    'app.services', 'app.directives', 'app.controllers'
+    'ngAnimate', 'ngAria', 'ngCookies', 'ngMessages', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch', 'ngMaterial',
+    'app.services', 'app.directives', 'app.controllers.ui',  'app.controllers.bookmark'
   ]).config(function ($routeProvider:angular.route.IRouteProvider) {
       $routeProvider
         .when('/tiles', {templateUrl: 'views/tiles.html', controller: 'TilesCtrl'})

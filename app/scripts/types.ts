@@ -5,8 +5,8 @@
 /// <reference path="../../typings/angularjs/angular-resource.d.ts" />
 /// <reference path="../../typings/angularjs/angular-route.d.ts" />
 /// <reference path="../../typings/angularjs/angular-sanitize.d.ts" />
+/// <reference path="../../typings/angular-material/angular-material.d.ts" />
 
-/// <reference path="../../typings/bootstrap/bootstrap.d.ts" />
 /// <reference path="../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../typings/moment/moment.d.ts" />
 /// <reference path="../../typings/chrome/chrome.d.ts" />
