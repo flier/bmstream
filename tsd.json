@@ -6,43 +6,43 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "jquery/jquery.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "angularjs/angular.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "moment/moment.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "chrome/chrome.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "webrtc/MediaStream.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "lunr/lunr.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "angularjs/angular-route.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "angularjs/angular-cookies.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "angularjs/angular-animate.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "angularjs/angular-resource.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "angularjs/angular-mocks.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "angularjs/angular-sanitize.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     },
     "moment/moment-node.d.ts": {
-      "commit": "aae45edc2a66df08c931bd8f104df34aeae6306d"
+      "commit": "2ca2ee37d47df607cc006824c516050a4cf869f0"
     }
   }
 }
