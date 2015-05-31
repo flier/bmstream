@@ -390,6 +390,11 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>'
         }, {
           expand: true,
+          cwd: '.',
+          src: 'bower_components/mdi/fonts/*',
+          dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
           cwd: '.tmp/scripts',
           src: ['**/*.js', '**/*.map'],
           dest: '<%= yeoman.dist %>/'

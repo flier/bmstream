@@ -1,7 +1,16 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-// endbower
+
+$mdi-font-path: "../bower_components/mdi/fonts";
+
+@import "mdi/scss/_variables.scss";
+
+  // bower:scss
+  @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+  @import "mdi/scss/_core.scss";
+  @import "mdi/scss/_icons.scss";
+  @import "mdi/scss/_path.scss";
+  @import "mdi/scss/materialdesignicons.scss";
+  // endbower
 
 .browsehappy {
   margin: 0.2em 0;
