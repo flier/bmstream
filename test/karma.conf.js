@@ -33,10 +33,9 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/angular-material/angular-material.js',
       'bower_components/moment/moment.js',
       'bower_components/stacktrace-js/stacktrace.js',
-      'bower_components/angular-ui-tree/dist/angular-ui-tree.js',
-      'bower_components/angular-ui-tree/dist/angular-ui-tree.min.js',
       'bower_components/lunr.js/lunr.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
