@@ -17,7 +17,6 @@
     "stacktrace-js": "~0.6.4",
     "lunr.js": "~0.5.9",
     "mdi": "~1.0.62-beta",
-    "q": "~2.0.2",
     "underscore": "~1.8.3"
   },
   "devDependencies": {

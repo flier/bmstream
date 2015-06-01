@@ -6,14 +6,12 @@ module ui {
   class NavbarController {
     public static $inject = [
       '$log',
-      '$scope',
-      '$location'
+      '$scope'
     ]
 
     constructor(
       private $log: ng.ILogService,
-      private $scope: ng.IScope,
-      private $location: ng.ILocationService)
+      private $scope: ng.IScope)
     {
     }
   }
@@ -22,26 +20,30 @@ module ui {
     public static $inject = [
       '$log',
       '$scope',
-      '$location'
+      '$q'
     ]
-
-    scope: ISearchBarControllerScope;
 
     constructor(
       private $log: ng.ILogService,
       private $scope: ISearchBarControllerScope,
-      private $location: ng.ILocationService)
+      private $q: ng.IQService)
     {
-      this.scope = $scope;
-
-      $scope.location = $location;
       $scope.simulateQuery = false;
       $scope.isDisabled = false;
       $scope.noCache = false;
 
       $scope.onSearchTextChanged = (text: string) => $log.info('Text changed to ' + text);
       $scope.onSelectedItemChanged = (item: Object) => $log.info('Item changed to ' + JSON.stringify(item));
-      $scope.querySearch = (text: string):SearchResultItem[] => null;
+    }
+
+    querySearch(text: string): ng.IPromise<SearchResultItem[]> {
+      this.$log.info('Query searching for ' + text);
+
+      var deferred = this.$q.defer<SearchResultItem[]>();
+
+      deferred.resolve([{display: text}]);
+
+      return deferred.promise;
     }
   }
 

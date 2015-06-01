@@ -17,7 +17,7 @@ module ui {
     onSearchTextChanged(text: string);
     onSelectedItemChanged(item: Object);
 
-    querySearch(query: string): SearchResultItem[];
+    querySearch(query: string): ng.IPromise<SearchResultItem[]>;
   }
 
   export interface IBookmarkViewScope extends ng.IScope {

@@ -33,7 +33,9 @@
             <span>Bookmarks</span>
           </h2>
           <span flex=""></span>
-          <md-icon md-font-icon="mdi mdi-magnify"></md-icon>
+          <md-button class="md-icon-button" aria-label="Search">
+            <md-icon md-font-icon="mdi mdi-magnify"></md-icon>
+          </md-button>
           <form ng-submit="$event.preventDefault()" ng-controller="SearchBarCtrl as searchBar">
             <md-autocomplete
               ng-disabled="searchBar.isDisabled"
@@ -83,7 +85,6 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/stacktrace-js/stacktrace.js"></script>
     <script src="bower_components/lunr.js/lunr.js"></script>
-    <script src="bower_components/q/q.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
