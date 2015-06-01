@@ -37,6 +37,8 @@ module.exports = function(config) {
       'bower_components/moment/moment.js',
       'bower_components/stacktrace-js/stacktrace.js',
       'bower_components/lunr.js/lunr.js',
+      'bower_components/q/q.js',
+      'bower_components/underscore/underscore.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

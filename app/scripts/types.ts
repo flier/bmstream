@@ -7,6 +7,8 @@
 /// <reference path="../../typings/angularjs/angular-sanitize.d.ts" />
 /// <reference path="../../typings/angular-material/angular-material.d.ts" />
 
+/// <reference path="../../typings/q/Q.d.ts" />
+/// <reference path="../../typings/underscore/underscore.d.ts" />
 /// <reference path="../../typings/jquery/jquery.d.ts" />
 /// <reference path="../../typings/moment/moment.d.ts" />
 /// <reference path="../../typings/chrome/chrome.d.ts" />
