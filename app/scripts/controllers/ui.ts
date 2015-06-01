@@ -1,4 +1,5 @@
 /// <reference path="../types.ts" />
+import md = angular.material;
 
 module ui {
   'use strict';
@@ -6,13 +7,30 @@ module ui {
   class NavbarController {
     public static $inject = [
       '$log',
-      '$scope'
+      '$scope',
+      '$mdSidenav',
+      '$mdUtil'
     ]
+
+    toggleSidenav: () => void;
+    switchView: () => void;
+    toggleSettings: () => void;
 
     constructor(
       private $log: ng.ILogService,
-      private $scope: ng.IScope)
+      private $scope: ng.IScope,
+      private $mdSidenav: md.MDSidenavService,
+      private $mdUtil: any)
     {
+      this.toggleSidenav = $mdUtil.debounce((id: string) => {
+        $mdSidenav(id).toggle().then(() => { $log.info('toggle ' + id + ' done'); });
+      });
+      this.switchView = $mdUtil.debounce(() => {
+        $log.info('switch view');
+      });
+      this.toggleSettings = $mdUtil.debounce(() => {
+        $log.info('toggle settings');
+      });
     }
   }
 
